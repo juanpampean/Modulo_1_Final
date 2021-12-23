@@ -39,19 +39,17 @@ let concesionaria = {
             )
             return listaDeVentas
                 },
-       // totalDeVentas:function(){
-        //    let listaventas=this.listaDeVentas;
-        //    let total=function(){this.listaventas.reduce(function(acum,num){
-        //        return acum + num})}
-        //    if (listaventas===[]) {return 0}
-        //    else {return total}
-        totaldeVentas:function(){
-          let listaventas=this.listaDeVentas;
-          if (listaventas===[]) {return totalventas=0}
-          else {totalventas=listaventas.reduce(function(acum,num){return acum + num})
-          }
-          return console.log(totalventas)
+        totalDeVentas : function(patente){
+            let venderAuto=this.venderAuto(patente)
+            let listaventas=this.listaDeVentas();
+            function reducer(acum,num){return acum+num};
+            if (listaventas.length!==0){return listaventas.reduce(reducer)}
+            else { return 0}
+            
         }
 }
-    console.log(concesionaria.venderAuto("APL123"))
-    console.log(concesionaria.totalDeVentas)
+
+            
+ //  console.log(concesionaria.venderAuto("JJK116"))
+ //  console.log(concesionaria.listaDeVentas())
+    console.log(concesionaria.totalDeVentas("JJK116"))
