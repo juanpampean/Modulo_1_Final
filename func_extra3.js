@@ -1,5 +1,5 @@
 let autos = require("./autos");
-//let patente="JJK116"
+let patente="APL123"
 
 let concesionaria = {
       autos:autos,
@@ -28,7 +28,17 @@ let concesionaria = {
             autosNuevos=autosParaLaVenta.filter(function(auto){
                 return auto.km<100})
                 return autosNuevos
+            },
+        listaDeVentas:function(){
+            let autos=this.autos;
+            let listaDeVentas=[]
+            let listaDeVenta=autos.filter(function(auto){
+                if (auto.vendido===true){
+                return listaDeVentas.push(auto.precio)}
+                else {return listaDeVentas.push() }}
+            )
+            return listaDeVentas
+                }
             }
-        }
-console.log(concesionaria.venderAuto("JJK116"))  
-console.log(concesionaria.autosNuevos())
+            console.log(concesionaria.venderAuto(patente))
+            console.log(concesionaria.listaDeVentas())
