@@ -1,0 +1,7 @@
+En base a las definiciones t�cnicas tomadas con el equipo deber�s declarar la variable autos. Esta debe contener los siguientes veh�culos:
+
+El primer auto es un Ford Fiesta Azul, del 2019, con 200 kil�metros, cuyo precio es 150000, disponible en 12 cuotas, con la patente APL123 que no est� vendido.
+El segundo auto es un Toyota Corolla Blanco, del 2019, 0 kil�metros, cuyo precio es 100000, disponible en 14 cuotas, con la patente JJK116 que no est� vendido.
+Cada auto debe tener los siguientes atributos: marca, modelo, precio, km, color, cuotas, anio, patente, vendido.
+
+IMPORTANTE: NO OLVIDAR INSTALAR MOMENT CON "NPM INTALL MOMENT"
