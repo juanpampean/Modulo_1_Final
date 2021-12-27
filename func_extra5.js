@@ -2,7 +2,7 @@
     let persona={
         nombre: 'Juan',
         capacidadDePagoEnCuotas:20000,
-        capacidadDePagoTotal: 10000000
+        capacidadDePagoTotal: 149000
     }
 
     let concesionaria = {
