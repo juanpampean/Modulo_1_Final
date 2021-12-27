@@ -1,7 +1,7 @@
 let autos = require("./autos");
 let persona={
     nombre: 'Juan',
-    capacidadDePagoEnCuotas:100,
+    capacidadDePagoEnCuotas:7300,
     capacidadDePagoTotal: 10000000
 }
 
@@ -59,13 +59,15 @@ let concesionaria = {
         else {return false}
         },
         autosQuePuedeComprar:function(persona){
-            let cars=autos;
-            let puedeComprar=this.puedeComprar
-            let autosquepuede=cars.filter(function(auto){
-            if (puedeComprar(auto,persona)===true) {return autosquepuede.push(auto)}
-            else {return autosquepuede.push()}
-            return autosquepuede})
-            
+            let cars=this.autosParaLaVenta();
+            let autosQuePuedeComprar=[];
+            let puedeComprar=this.puedeComprar;
+            let autosquepuede=cars.filter(function(car){
+                if (puedeComprar(car,persona)===true){
+                return autosQuePuedeComprar.push(car)}
+                else {return autosQuePuedeComprar.push()}
+            })
+            return autosQuePuedeComprar
         }
 
         }
@@ -74,4 +76,4 @@ let concesionaria = {
         
 //  console.log(concesionaria.venderAuto("JJK116"))
 //  console.log(concesionaria.listaDeVentas())
-console.log(concesionaria.autosQuePuedeComprar())
+console.log(concesionaria.autosQuePuedeComprar(persona))
