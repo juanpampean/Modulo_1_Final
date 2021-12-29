@@ -1,8 +1,8 @@
     let autos = require("./autos");
     let persona={
         nombre: 'Juan',
-        capacidadDePagoEnCuotas:20000,
-        capacidadDePagoTotal: 149000
+        capacidadDePagoEnCuotas:25000,
+        capacidadDePagoTotal: 150000
     }
 
     let concesionaria = {
@@ -57,7 +57,6 @@
         persona.capacidadDePagoEnCuotas>=(autos.precio/autos.cuotas))
           {return true}
             else {return false}
-    
             }
 
             }

@@ -1,7 +1,7 @@
 let autos = require("./autos");
 let persona={
     nombre: 'Juan',
-    capacidadDePagoEnCuotas:7300,
+    capacidadDePagoEnCuotas:12500,
     capacidadDePagoTotal: 10000000
 }
 
@@ -14,7 +14,7 @@ let concesionaria = {
         });
         if (autosFiltrados.length===0)
         {return null}
-        else 
+        else  
         {return autosFiltrados[0]}
         },
         venderAuto: function (patente){
