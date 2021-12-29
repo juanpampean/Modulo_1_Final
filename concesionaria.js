@@ -59,12 +59,13 @@ let concesionaria = {
         return 0
     },
     puedeComprar:function(persona,autos){
-      return (persona.capacidadPagoTotal >= autos.precio) && (persona.capacidadPagoEnCuotas >= (autos.precio/autos.cuotas))
+    
+      return ((persona.capacidadDePagoTotal >= autos.precio) && (persona.capacidadDePagoEnCuotas >= (autos.precio/autos.cuotas)))
     },
     autosQuePuedeComprar:function(persona){
-      let autoParaVender = this.autosParaLaVenta();
+      let autosParaVender = this.autosParaLaVenta();
       let autosFiltrados = autosParaVender.filter(function(auto){
-        return consecionaria.puedeComprar(persona,auto)
+        return concesionaria.puedeComprar(persona,auto)
 
       })
       return autosFiltrados
@@ -72,4 +73,4 @@ let concesionaria = {
 }
 
 //console.log(concesionaria.venderAuto(patente))
-console.log(concesionaria.puedeComprar(persona,autos[0]))
+console.log(concesionaria.autosQuePuedeComprar(persona))
